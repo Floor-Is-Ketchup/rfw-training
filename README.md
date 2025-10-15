@@ -1,0 +1,2 @@
+# rfw-training
+RobotFramework basics
