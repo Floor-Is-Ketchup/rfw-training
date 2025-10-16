@@ -1,6 +1,6 @@
 *** Variables ***
-${company}=     
-${name}=
+${COMPANY}=    Company
+${NAME}=
 
 *** Test Cases ***
 Log and Console
@@ -11,7 +11,7 @@ Log and Console
     # You may use any number of Log statements to achieve this.
 
 Bonus
-    #TODO: fill in the variables at the top so that your name is printed in the sentence
+    #TODO: fill in the variable at the top of this suite so that your name is printed by the statement below
     [Tags]    robot:skip
-    Log To Console
-    ...    my name is: ${name} and ${company} is a fun company to work for!
+    Log To Console  my name is: ${NAME} and ${COMPANY} is a fun company to work for!
+    

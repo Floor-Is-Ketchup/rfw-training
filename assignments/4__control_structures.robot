@@ -37,7 +37,7 @@ Bonus
 # Status 200 already works as intended
 # Status 400 should log "Bad Request" to the log.html to the console and to the log.html with loglevel "ERROR"
 # Status 404 should log "Not Found" to the log.html with loglevel "WARN"
-# Status 500 should FAIL the task/test (use the Fail keyword from BuiltIn)
+# Status 500 should FAIL the task/test (use the Fail keyword from BuiltIn) with text "Internal Server Error"
 # Any other status should be logged as "received unknown status:" followed by the status, at loglevel DEBUG
     # Tip: dont forget about the ELSE statement
 

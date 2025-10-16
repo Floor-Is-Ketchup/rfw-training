@@ -16,8 +16,8 @@ Special Password Generator
     ...    #TODO: Return the password here
 
 Calculate Difference
-    [Documentation]    This keyword returns the difference between value 1 and 2
-    [Arguments]    ${x}=1    ${y}=1
+    [Documentation]    This keyword returns the difference between x and y
+    [Arguments]    ${x}    ${y}=0
     ${diff}=    Evaluate    abs(${x} - ${y})
     [Return]    ${diff}
 
