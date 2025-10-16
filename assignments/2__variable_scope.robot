@@ -1,9 +1,11 @@
 *** Settings ***
 Documentation     Answer the commented questions for yourself, run the suite and check your answers
+...        
+...        documentation: https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#variables
 Suite Setup       Set All Suite Variables    #sets SUITE_VAR to S_A
 
 *** Variables ***
-${GLOBAL_VAR}     G_A
+${GLOBAL_VAR}=     G_A
 
 *** Test Cases ***
 Test 1 - Set Variables
@@ -25,6 +27,7 @@ Test 2 - Log Variables
     Log    TEST_VAR IS NOW: ${TEST_VAR}        # What is the value here? T_A, T_B or T_C?
 
 Bonus
+    [Tags]    bonus    robot:skip
     Log To Console     ${SUITE_VAR}    # What is the value if you run the whole suite?
                                        # And what if you only run this test?
 

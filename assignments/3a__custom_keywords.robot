@@ -1,16 +1,23 @@
 *** Settings ***
 Documentation     Test suite using CustomKeywords.robot
-Resource          3b__custom_keywords.resource
+...            
+...               Documentation: https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-user-keywords
+
 
 *** Variables ***
 ${default_username}=    user
-${expected_password}=    user@2025!
-${num1}              10
-${num2}              3
-${campsite_name}     Sunny Meadows
-@{features}          Pool    Wifi    Barbecue
+${expected_password}=    user@${year}!
+${num1}=              10
+${num2}=              3
+${campsite_name}=     Sunny Meadows
+@{features}=          Pool    Wifi    Barbecue
 
 *** Test Cases ***
+Test Resource import
+    #TODO: Make this test pass and log the variable, by adding a "Resource" in the Settings
+    # Make that Resource point to your resources/<name>.resources file
+    # Note that we are using the same variable in our Variables section, which should also work after adding the Resource
+    Log To Console    ${year}
 
 Test Difference Keyword
     #TODO: Pass the variables "num1" and "num2" in the proper way, so that the test passes
@@ -29,7 +36,7 @@ Test Formatting Keyword
     # use the "Should Contain" keyword from BuiltIn library
 
 Bonus
-    [Tags]    robot:skip
+    [Tags]   bonus   robot:skip
     ${default_sentence}=    Format Campsite Info
     ...    ${campsite_name}    @{features}
 

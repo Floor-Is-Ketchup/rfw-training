@@ -19,8 +19,10 @@ Test Case Title
     #TODO: Log your scalar here
 
 Bonus
-    [Tags]    robot:skip    # Remove this line to run the test
+    [Tags]  Bonus  robot:skip    # Remove this line to run the test
     # TODO:
     # - Log the second element of your list
     # - Log the value of the first key of your dict
     Log    nothing yet
+
+#BONUS: Add the comments section here with a single comment in it.

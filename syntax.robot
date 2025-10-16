@@ -3,7 +3,7 @@ Documentation     Example Robot Framework template showing all key sections and 
 ...               Copy & paste friendly — good for learning.
 Library           RequestsLibrary
 Library           OperatingSystem
-Resource          resources/commons.resource
+Resource          examples/resources/commons.resource
 Suite Setup       Setup Suite
 Suite Teardown    Teardown Suite
 Test Setup        Setup Test

@@ -6,7 +6,7 @@ RobotFramework basics training
 
 ## Robotframework Docs
 
-### Officiele documentatie
+### Official documentation
 - Documentatie: https://robotframework.org/robotframework/
 
 ### BuiltIn Library
@@ -14,4 +14,18 @@ RobotFramework basics training
 - Documentatie BuiltIn Library latest: https://robotframework.org/robotframework/latest/libraries/BuiltIn.html
 
 ### RequestsLibrary
-- Documentatie: https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html
+- Documentation: https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html
+
+## Contents
+
+### Assignments
+Contains the assignments belonging to the presentation and information
+
+### Examples
+Different examples of Robot Framework code
+
+### Praegus Travels
+For usage of part 2 of the training
+
+### Syntax.robot
+Primary example file, to help look up syntax when desired
