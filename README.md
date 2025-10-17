@@ -19,13 +19,13 @@ RobotFramework basics training
 ## Contents
 
 ### Assignments
-Contains the assignments belonging to the presentation and information
+Contains the assignments belonging to the presentation and information: [Assignments](assignments/README.md)
 
 ### Examples
-Different examples of Robot Framework code
+Different examples of Robot Framework code 
 
 ### Praegus Travels
-For usage of part 2 of the training
+For usage of part 2 of the training: [Praegus Travels](praegus_travels/README.md)
 
 ### Syntax.robot
 Primary example file, to help look up syntax when desired
