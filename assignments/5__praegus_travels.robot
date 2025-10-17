@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    API definition can be found here: https://travels.praegus.nl/swagger-ui/index.html
+Documentation    API definition can be found here: http://travels.praegus.nl/swagger-ui/index.html
 ...              Frontend can be found here: https://travels.praegus.nl/campsites
 Library    RequestsLibrary
 Suite Setup    Create Session    
