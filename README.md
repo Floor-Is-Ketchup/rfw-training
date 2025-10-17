@@ -6,25 +6,24 @@ RobotFramework basics training
 
 ## Robotframework Docs
 
-### Official documentation
-- Documentatie: https://robotframework.org/robotframework/
-
-### BuiltIn Library
-- [Documentatie BuiltIn Library 6.1](https://robotframework.org/robotframework/6.1/libraries/BuiltIn.html)
-- [Documentatie BuiltIn Library latest](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html)
-
-### RequestsLibrary
-- Documentation: https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html
+### Documentation
+- [Official documentation Robotframework](https://robotframework.org/robotframework/)
+- [Documentation for BuiltIn Library 6.1](https://robotframework.org/robotframework/6.1/libraries/BuiltIn.html)
+- [Documentation for BuiltIn Library latest](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html)
+- [Documentation for RequestsLibrary](https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html)
 
 ## Contents
 
 ### Assignments
 Contains the assignments belonging to the presentation and information: 
 -  [README](assignments/README.md)
--  [Github - Assignments](https://github.com/Floor-Is-Ketchup/rfw-training/tree/main/assignments)
+-  [Github - Assignments](assignments)
 
 ### Examples
 Different examples of Robot Framework code 
-
-### Syntax.robot
-Primary example file, to help look up syntax when desired
+- [syntaxing](examples/syntax.robot)
+- [log messages](examples/log.robot)
+- [template for testcase](examples/template_tc.robot)
+- [template on suite level](examples/template_suite.robot)
+- [control structures](examples/control_structures.robot)
+- [resource files](examples/resources)
