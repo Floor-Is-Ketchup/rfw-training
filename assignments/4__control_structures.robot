@@ -9,7 +9,7 @@ Documentation    This Suite is meant for practicing the control structures IF an
 @{STATUSES}    200    400    404    500    999    FOO
 ${current_status}=    200     # Change this status to test your "Log status" test
 
-*** Tasks ***
+*** Test Cases ***
 Check single status
     Log status    ${current_status}
 
