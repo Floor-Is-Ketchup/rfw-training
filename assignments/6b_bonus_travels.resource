@@ -39,7 +39,7 @@ DELETE all campsites
     [Return]    ${response}
 
 Setup Travel Suite
-    Create Session     alias=PraegusTravelApi   url=https://travels.praegus.nl/api/campsites
+    Create Session     alias=PraegusTravelApi   url=http://travels.praegus.nl/api/campsites
 
 Check "${response}" Has Status: "${status}"   
     Should Be Equal As Integers    ${response.status_code}    ${status}

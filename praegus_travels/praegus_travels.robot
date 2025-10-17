@@ -5,7 +5,7 @@ Documentation    API definition can be found here: https://travels.praegus.nl/sw
 Library    RequestsLibrary
 Suite Setup    Create Session    
 ...    alias=lvnl    
-...    url=https://travels.praegus.nl/api
+...    url=http://travels.praegus.nl/api
 
 Suite Teardown    Delete All Sessions
 
