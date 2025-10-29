@@ -2,7 +2,7 @@
 Documentation     Test suite using CustomKeywords.robot
 ...            
 ...               Documentation: https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-user-keywords
-
+# Add a Resource here
 
 *** Variables ***
 ${default_username}=    user
@@ -15,7 +15,7 @@ ${campsite_name}=     Sunny Meadows
 *** Test Cases ***
 Test Resource import
     #TODO: Make this test pass and log the variable, by adding a "Resource" in the Settings
-    # Make that Resource point to your resources/<name>.resources file
+    # Make that Resource point to your <name>.resources file (optional: in another directory)
     # Note that we are using the same variable in our Variables section, which should also work after adding the Resource
     Log To Console    ${year}
 
