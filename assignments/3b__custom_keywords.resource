@@ -12,8 +12,7 @@ Special Password Generator
     #TODO: Add the argument username
     [Arguments]
     Set Variable    ${password}   ${username}@2025!
-    [Return]
-    ...    #TODO: Return the password here
+    [Return]    TODO: Return the password here
 
 Calculate Difference
     [Documentation]    This keyword returns the difference between x and y
