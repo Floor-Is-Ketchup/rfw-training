@@ -3,6 +3,7 @@ Documentation     Example Robot Framework template showing all key sections and 
 ...               Copy & paste friendly — good for learning.
 Library           RequestsLibrary
 Library           OperatingSystem
+Library           Collections
 Resource          resources/commons.resource
 Suite Setup       Setup Suite
 Suite Teardown    Teardown Suite
@@ -32,7 +33,7 @@ Example Test With Custom Keyword
 Example Test Using Dictionary And List
     [Tags]    dict
     Log    ${DICT_EXAMPLE}[username]
-    Log    ${LIST_EXAMPLE}[0]
+    Log    ${LIST_EXAMPLE}[]
 
 Example Test Using FOR Loop
     [Tags]    loop    list
