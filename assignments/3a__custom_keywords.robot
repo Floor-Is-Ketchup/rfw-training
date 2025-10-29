@@ -7,8 +7,8 @@ Documentation     Test suite using CustomKeywords.robot
 *** Variables ***
 ${default_username}=    user
 ${expected_password}=    user@${year}!
-${num1}=              10
-${num2}=              3
+${num1}=              ${10}
+${num2}=              ${3}
 ${campsite_name}=     Sunny Meadows
 @{features}=          Pool    Wifi    Barbecue
 

@@ -9,14 +9,14 @@ ${year}=    2025
 *** Keywords ***
 Special Password Generator
     [Documentation]    This keyword returns a special password for a given username
-    #TODO: Add the argument username
+    #TODO: Add the argument: username
     [Arguments]
     Set Variable    ${password}   ${username}@2025!
     [Return]    TODO: Return the password here
 
 Calculate Difference
     [Documentation]    This keyword returns the difference between x and y
-    [Arguments]    ${x}    ${y}=0
+    [Arguments]    ${x}    ${y}=${0}
     ${diff}=    Evaluate    abs(${x} - ${y})
     [Return]    ${diff}
 
