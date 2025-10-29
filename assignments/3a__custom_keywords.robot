@@ -38,14 +38,18 @@ Test Formatting Keyword
 Bonus
     [Tags]   bonus   robot:skip
     ${default_sentence}=    Format Campsite Info
-    ...    ${campsite_name}    @{features}
+    ...   ${campsite_name}    
+    ...   ${features}
 
     # TODO: Create the "Custom Create Sentence" Keyword so that this test passes
 
     ${custom_sentence}=    Custom Format Campsite Info
-    ...    ${campsite_name}    @{features} 
+    ...   ${campsite_name}    
+    ...   ${features}
 
     Should Be Equal As Strings    ${default_sentence}    ${custom_sentence}
+
+    
 
 *** Keywords ***
 Custom Format Campsite Info

@@ -47,7 +47,7 @@ Check "${response}" Has Status: "${status}"
 POST campsite and return response
     [Documentation]    Returns the response to posting a campsite
     [Arguments]  
-    ...     ${name}                        #Mandatory
+    ...    ${name}                        #Mandatory
     ...    ${location}                     #Mandatory
     ...    ${description}=""   
     ...    ${pricePerNight}=0    
