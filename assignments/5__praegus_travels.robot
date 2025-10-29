@@ -58,8 +58,9 @@ GET available locations
     [Tags]    GET
     ${response}=    GET request and return response   url=campsites/available
     # TODO: Add a testcase that tests if the "available" filter works properly
-    #    - OPTIONAL: find or add a campsite you want to test with
+    #    - find or OPTIONAL: add a campsite you want to test with    (manually)
     #    - check that the response contains the campsite that you have chosen to test with
+    #        Use the "Should Contain" keyword to check if it is present
 
 
 GET with specific location
@@ -69,7 +70,8 @@ GET with specific location
     #    - OPTIONAL: add a campsite (frontend or backend) with a specific location name for yourself
     #    - add a variable in this suite with the chosen location name
     #    - check that the response has the right campsite
-    #    - BONUS: use a FOR loop to check that every campsite in the response has the correct location
+    #        Use the "Should Contain" keyword
+    #    - BONUS: use a FOR loop to check that every campsite in the response has the same location
 
 Bonus
     [Tags]  bonus  robot:skip
@@ -77,6 +79,8 @@ Bonus
     # TODO: this Test Case needs to check if the maxPrice filter works properly
     # Check both the positive flow (if the price is lower than the maxPrice, the campsite is returned)
     # And the negative flow (if the price is higher than the maxPrice, the campsite is not returned)
+    # Then extend the test to check that each campsite.price is lower than or equal to the maxPrice
+    #    Fail the test if this is not the case.
 
 #OPTIONAL: feel free to add any testcases that you desire
 
