@@ -1,8 +1,9 @@
 *** Settings ***
 Documentation    API definition can be found here: http://travels.praegus.nl/swagger-ui/index.html
+...               NB: swagger-ui is HTTP, not HTTPS! Browsers will default to https
 ...              Frontend can be found here: https://travels.praegus.nl/campsites
 Library    RequestsLibrary
-Suite Setup    Create Session    
+Suite Setup    Create Session
 ...    alias=travelapi    
 ...    url=http://travels.praegus.nl/api
 Suite Teardown    Delete All Sessions
@@ -26,8 +27,19 @@ GET all campsites
     [Tags]    GET
     ${response}=    GET request and return response    url=campsites
     FOR    ${campsite}    IN    @{response.json()}
-        Log    ${campsite}[id]    console=true
+        Log    ${campsite}[id]    console=true        
     END
+
+Check large campsite
+    [Tags]    IF
+    ${response}=    GET request and return response    url=campsites
+    FOR    ${campsite}    IN    @{response.json()}
+        ${capacity}=    Set Variable    ${campsite}[capacity]
+        IF    ${capacity} >= 8
+        Pass Execution    Large campsite found
+        END
+    END
+    Fail    No large campsite found
 
 POST to add a campsite
     [Tags]    POST     robot:skip    #skip to avoid unnecessary additions

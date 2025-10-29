@@ -4,14 +4,14 @@ Documentation     Custom keywords to showcase resourcing
 ...               Documentation: https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#resource-and-variable-files
 
 *** Variables ***
-${year}=    2025
+${YEAR}=    2025
 
 *** Keywords ***
 Special Password Generator
     [Documentation]    This keyword returns a special password for a given username
     #TODO: Add the argument: username
     [Arguments]
-    Set Variable    ${password}   ${username}@2025!
+    ${password}=    Set Variable    ${username}@2025!
     [Return]    TODO: Return the password here
 
 Calculate Difference
@@ -22,6 +22,6 @@ Calculate Difference
 
 Format Campsite Info
     [Documentation]    Returns a full sentence including the provided information
-    [Arguments]    ${campsite_name}    @{features}
+    [Arguments]    ${campsite_name}    ${features}
     ${sentence}=    Set Variable    The campsite "${campsite_name}" has the following features: ${features}.
     [Return]    ${sentence}

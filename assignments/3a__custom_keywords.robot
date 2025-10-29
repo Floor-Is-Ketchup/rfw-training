@@ -6,7 +6,7 @@ Documentation     Test suite using CustomKeywords.robot
 
 *** Variables ***
 ${default_username}=    user
-${expected_password}=    user@${year}!
+${expected_password}=    user@${YEAR}!
 ${num1}=              ${10}
 ${num2}=              ${3}
 ${campsite_name}=     Sunny Meadows
@@ -17,7 +17,7 @@ Test Resource import
     #TODO: Make this test pass and log the variable, by adding a "Resource" in the Settings
     # Make that Resource point to your <name>.resources file (optional: in another directory)
     # Note that we are using the same variable in our Variables section, which should also work after adding the Resource
-    Log To Console    ${year}
+    Log To Console    ${YEAR}
 
 Test Difference Keyword
     #TODO: Pass the variables "num1" and "num2" in the proper way, so that the test passes
