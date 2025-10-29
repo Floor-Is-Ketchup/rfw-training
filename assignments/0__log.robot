@@ -12,6 +12,6 @@ Log and Console
 
 Bonus
     #TODO: fill in the variable at the top of this suite so that your name is printed by the statement below
-    [Tags]    robot:skip
+    [Tags]  Bonus  robot:skip    # Remove this line to run the test
     Log To Console  my name is: ${NAME} and ${COMPANY} is a fun company to work for!
     

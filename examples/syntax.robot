@@ -29,10 +29,10 @@ Example Test With Custom Keyword
     [Documentation]    Shows using a user-defined keyword.
     Custom Keyword Example    ${SCALAR_EXAMPLE}
 
-Example Test Using Dictionary
+Example Test Using Dictionary And List
     [Tags]    dict
     Log    ${DICT_EXAMPLE}[username]
-    Log    ${DICT_EXAMPLE}[password]
+    Log    ${LIST_EXAMPLE}[0]
 
 Example Test Using FOR Loop
     [Tags]    loop    list
