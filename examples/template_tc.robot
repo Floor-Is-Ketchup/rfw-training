@@ -6,7 +6,7 @@ Library    RequestsLibrary
 Template requests
     [Template]    Repeatable Keyword with inline arg1: "${id}" and arg2: "${name}"
     #id  #name
-    1    Floris
+    1    Joris
     2    Jan
     3    Klaas
     4    Pieter
@@ -14,5 +14,4 @@ Template requests
 
 *** Keywords ***
 Repeatable Keyword with inline arg1: "${id}" and arg2: "${name}"
-    Log    ${id}    console=true
-    Log    ${name}    console=true
+    Log    ${id}, ${name}    console=true
