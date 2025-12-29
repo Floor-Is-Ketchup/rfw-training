@@ -8,35 +8,35 @@ ${alias}=    PraegusTravelApi
 GET campsites and return response
     [Arguments]    ${url}=
     ${response}=    GET On Session    alias=${alias}    url=${url}
-    [Return]    ${response}
+    RETURN    ${response}
 
 GET campsite with maxPrice
     [Arguments]  ${maxPrice} 
     ${response}=    GET On Session    alias=${alias}    url=/search/price    params=maxPrice=${maxPrice}
-    [Return]    ${response}
+    RETURN    ${response}
 
 GET campsite with location
     [Arguments]        ${location}
         ${response}=    GET On Session    alias=${alias}    url=/search/location    params=location=${location}
-    [Return]    ${response}
+    RETURN    ${response}
 
 GET campsite with ID: "${id}"
     ${id}=    Convert To String    ${id}
     ${response}=    GET campsites and return response    url=${id}
     Check "${response}" has status: "200"
-    [Return]    ${response}
+    RETURN    ${response}
 
 DELETE campsite with ID: "${id}"
     ${id}=    Convert To String    ${id}
     ${response}=    DELETE On Session    alias=${alias}    url=${id}
     Check "${response}" has status: "204"
-    [Return]    ${response}
+    RETURN    ${response}
 
 DELETE all campsites
     Fatal Error    msg=Please do not delete all campsites
     ${response}=    DELETE On Session    alias=${alias}    url=
     Check "${response}" has status: "204"
-    [Return]    ${response}
+    RETURN    ${response}
 
 Setup Travel Suite
     Create Session     alias=PraegusTravelApi   url=http://travels.praegus.nl/api/campsites
@@ -83,4 +83,4 @@ Update Campsite Dictionary
     [Documentation]    Takes a campsite dictionary, updates the key with the newValue and returns it
     [Arguments]    ${dict}    ${key}    ${newValue}
     &{newDict}=    Create Dictionary    &{dict}    ${key}=${newValue}
-    [Return]     ${newDict}
+    RETURN     ${newDict}

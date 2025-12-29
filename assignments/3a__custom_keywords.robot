@@ -2,7 +2,7 @@
 Documentation     Test suite using CustomKeywords.robot
 ...            
 ...               Documentation: https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-user-keywords
-# Add a Resource here
+# Add your Resource here here
 
 *** Variables ***
 ${default_username}=    user
@@ -29,34 +29,35 @@ Test Password Generator Keyword
     ${special_password}=    Special Password Generator   username=${default_username}
     Should Be Equal As Strings   ${special_password}    ${expected_password}
 
-Test Formatting Keyword
-    ${sentence}=    Format Campsite Info    
-    ...    ${campsite_name}    @{features}
-    # TODO: Check that the campsite name is included in the sentence that is returned, 
-    # use the "Should Contain" keyword from BuiltIn library
+Test Print Keyword
+    ${formatted_info}=    Get Formatted Campsite Info
+    ...    campsite_name=${campsite_name}
+    ...    features=${features}
+    # TODO: Check that the campsite name and all features are included in the sentence that is returned, 
+    # use the "Should Contain" keyword from BuiltIn library (any number of times)
+    Should Contain    #TODO: Finish this statement
 
 Bonus
     [Tags]   bonus   robot:skip
-    ${default_sentence}=    Format Campsite Info
-    ...   ${campsite_name}    
-    ...   ${features}
-
     # TODO: Create the "Custom Create Sentence" Keyword so that this test passes
+    ${information}=    Custom Format Campsite Info    ${campsite_name}    ${features}
+    Log    Custom formatted campsite information: ${information}    console=true
+    Check "${information}" Contains: "${features}"
+    Check "${information}" Contains: "${campsite_name}"
 
-    ${custom_sentence}=    Custom Format Campsite Info
-    ...   ${campsite_name}    
-    ...   ${features}
-
-    Should Be Equal As Strings    ${default_sentence}    ${custom_sentence}
-
-    
 
 *** Keywords ***
 Custom Format Campsite Info
-    [Arguments]    ${campsite_name}    @{features}
-    ${sentence}=    Custom Create Sentence     ${campsite_name}    ${features}
-    [Return]    ${sentence}
+    #BONUS TODO: Add required argument(s), logic and return statement
+    [Arguments]
+    # ADD your logic to make a single string/sentence
+    RETURN
+    # Make sure to also return it
 
-#BONUS TODO: Create the missing Keyword here
-    # Add the proper arguments, logic and return statement
-    # Look at "Format Campsite Info" for inspiration
+
+# This keyword is for BONUS test only, and does NOT need to be adjusted. Feel free to ignore this.
+Check "${string}" Contains: "${items}"
+    [Arguments]  ${items}
+    FOR    ${item}    IN    @{items}
+        Should Contain    @{string}[0]    ${item}    msg=String "${string}" does NOT contain "${item}"
+    END

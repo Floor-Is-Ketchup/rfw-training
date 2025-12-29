@@ -69,7 +69,7 @@ Custom Keyword Example
     Log To Console    \nRunning custom keyword with argument: ${arg1}
     ${upper}=    Convert "${arg1}" To Uppercase        # imported from commons.resource
     Log    Converted: ${upper}
-    [Return]    ${upper}
+    RETURN    ${upper}
 
 Conditional Keyword Example
     [Arguments]    ${status}    ${optional_argument}=${EMPTY}

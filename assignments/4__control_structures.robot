@@ -1,55 +1,53 @@
 *** Settings ***
-Documentation    This Suite is meant for practicing the control structures IF and FOR
+Documentation    This Suite is meant for practicing the control structures IF and FOR, tests DO NOT need to be adjusted for the main assignment
+...              For the Bonus excercise, an adjustment of the Test is required.
 ...
 ...            Documentation can be found here: 
-...    6.1:    https://robotframework.org/robotframework/6.1/RobotFrameworkUserGuide.html#control-structures
 ...    latest: https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#control-structures
 
 *** Variables ***
-@{STATUSES}    200    400    404    500    FOO
-${current_status}=    200     # Change this status to test your "Check single status" test
+@{STATUSES}    200   404    500    FOO
 
 *** Test Cases ***
-Check single status
-    Custom Log Status Checker    ${current_status}
+Check information for status 200
+    ${info_200}=    Custom Return Status Information    status=${STATUSES}[0]
+    Should Contain   container=${info_200}    item=OK    msg=for status "200" the information should contain "OK"
 
-Check every status
-    [Tags]    robot:continue-on-failure    #Special robot tag
-    Custom Log Status Checker    200    #OK
-    Custom Log Status Checker    400    #ERROR: Bad Request
-    Custom Log Status Checker    404    #WARN: Not Found
-    Custom Log Status Checker    500    #Should result in a sentence in the log, on DEBUG level
-    Log To Console    Checked all statusses
+Check information for status 404
+    ${info_404}=    Custom Return Status Information    status=${STATUSES}[1]
+    Should Contain   container=${info_404}    item=Not Found    msg=for status "404" the information should contain "Not Found"
 
-Loop over statussen
-    #TODO: Replace the questionmarks to make this loop work
-    # End result should be a Log statement in the terminal per status in the list (6 total)
-    FOR     ?   IN     ?
-        Log To Console   Status received: ${status}
-    END
+Check information for status 500
+    ${info_500}=    Custom Return Status Information    status=${STATUSES}[2]
+    Should Contain   container=${info_500}    item=Error    msg=for status "500" the information should contain "Error"
+
+Check information for status foo
+    ${info_foo}=    Custom Return Status Information    status=${STATUSES}[3]
+    Should Contain    container=${info_foo}    item=Unknown    msg=for status "FOO" the information should contain "Unknown"
 
 Bonus
-    [Tags]    bonus    robot:skip    robot:continue-on-failure
-    #TODO: Combine a FOR loop with the "Custom Log Status Checker" keyword to simplify the previous Tasks into a few lines
-    # Even when executed correctly, this test will not pass due to the "Fail" keyword being called.
-
-*** Keywords ***
-#TODO: Fix this keyword to do the following:
-# Status 200 already works as intended
-# Status 400 should log "Bad Request" to the log.html to the console and to the log.html with loglevel "ERROR"
-# Status 404 should log "Not Found" to the log.html with loglevel "WARN"
-# Any other status should be logged as "received unknown status:" followed by the status, at loglevel DEBUG
-    # And this should also result in a failed test (use the "Fail" keyword from the builtIn library)
-    # Tip: dont forget about the ELSE statement
-
-Custom Log Status Checker
-    [Arguments]    ${status}
-    IF    "${status}" == "200"
-        Log To Console    OK         
-    ELSE IF  "" == ""
-        # TODO: Replace and continue the logic here
-        Log    Nothing happens
+    [Documentation]    This test utilizes a FOR loop to run all the tests at once.
+    ...    For actual practical use, it would be advised to use a test template instead to achieve the same goal.
+    [Tags]    bonus    robot:skip
+    #TODO: Replace the "?" and "???" in the following test to make it pass
+    #TIP: every "?" is replaced by the exact same string
+    VAR    &{status_and_information}=    200=OK    404=Not Found    500=Error    FOO=Unknown
+    FOR     ?    IN      ???
+        ${status_info}=    Custom Return Status Information    status=?
+        Should Contain   container=${status_info}   item=${status_and_information}[?]
+        Log To Console    info for status "?" is: ${status_info}
     END
 
+*** Keywords ***
+Custom Return Status Information
+    [Documentation]    returns information regarding the status
+    ...  status 200 = OK, status 404 = Not Found, status 500 = Internal Server Error, other statusses are unknown.
+    [Arguments]    ${status}
+    IF    "${status}" == "200"
+        RETURN   OK  
+    ELSE IF  "${status}" == "404"
+        RETURN
+        # TODO: Replace and continue the logic here to complete the keyword
+    END
 
-    
+    RETURN

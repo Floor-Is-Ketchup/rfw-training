@@ -117,6 +117,6 @@ GET request and return response
     [Arguments]    ${alias}=travelapi    ${url}=campsites
     ${response}=    GET On Session    alias=${alias}    url=${url}
 
-    [Return]    ${response}
+    RETURN    ${response}
 
 # OPTIONAL: write custom keywords to make your life easier
