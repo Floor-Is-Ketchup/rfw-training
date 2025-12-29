@@ -5,7 +5,7 @@ Documentation    API definition can be found here: http://travels.praegus.nl/swa
 Library    RequestsLibrary
 Suite Setup    Create Session
 ...    alias=travelapi    
-...    url=http://travels.praegus.nl/api
+...    url=http://travels.praegus.nl/api/campsites
 Suite Teardown    Delete All Sessions
 
 *** Comments ***
@@ -13,6 +13,7 @@ This suite is to explore and "play around" with some actual testing and the Prae
 Feel free to "play around" with the different functionalities in the frontend and the backend
 
 *** Variables ***
+${id}=    ${None}
 #OPTIONAL: Add custom variables to make your life easier
 
 *** Test Cases ***
@@ -42,17 +43,17 @@ Check large campsite
     Fail    No large campsite found
 
 POST to add a campsite
-    [Tags]    POST     robot:skip    #skip to avoid unnecessary additions
-    ${response}=    POST campsite and return response
-    ...    name=Praegus-camping
-    ...    location=Leusden
+    [Tags]    POST   #skip to avoid unnecessary additions
+    ${new_campsite}=    Create Campsite Dictionary
+    ...    name=Praegus-Camping
+    ...    location=Leusderend, Leusden
+    ${response}=    POST campsite and return response    &{new_campsite}
     &{campsite}=    Set Variable    ${response.json()}
     Log    ${campsite}   level=DEBUG
     Should Be Equal As Integers    ${response.status_code}    201
     IF    "${response.status_code}" == "201"
         Log To Console    Created campsite has id: ${response.json()}[id]
     END
-
 
 GET available locations
     [Tags]    GET
@@ -85,38 +86,47 @@ Bonus
 #OPTIONAL: feel free to add any testcases that you desire
 
 *** Keywords ***
-POST campsite and return response
-    [Documentation]    Returns the response to posting a campsite
+Create Campsite Dictionary
+    [Documentation]    Returns a dictionary with all the keys for a campsite, each argument is a key
     [Arguments]  
-    ...     ${name}                        #Mandatory
-    ...    ${location}                     #Mandatory
+    ...    ${name}                        #Mandatory for keyword
+    ...    ${location}                     #Mandatory for keyword
     ...    ${description}=""   
-    ...    ${pricePerNight}=0    
-    ...    ${capacity}=1    
-    ...    ${amenities}=""    
+    ...    ${pricePerNight}=99.99    
+    ...    ${capacity}=2
+    ...    ${amenities}=""
+    ...    ${imageUrl}=${None}
+    ...    ${available}=true
     ...    ${campsiteType}="camping"    
     ...    ${terrainType}="Urban"    
     ...    ${accessibilityLevel}="hard"
 
-        &{payload}=    Create Dictionary    
+        &{campsite}=    Create Dictionary    
     ...    name=${name}
     ...    location=${location}
     ...    description=${description}
     ...    pricePerNight=${pricePerNight}
     ...    capacity=${capacity}
     ...    amenities=${amenities}
+    ...    imageUrl=${imageUrl}
+    ...    available=${available}
     ...    campsiteType=${campsiteType}
     ...    terrainType=${terrainType}
     ...    accessibilityLevel=${accessibilityLevel}
 
-    ${response}=    POST On Session    alias=travelapi    url=campsites    json=${payload}
+    RETURN    &{campsite}
+
+POST campsite and return response
+    [Documentation]    Posts a new campsite and returns the response to posting a campsite dictionary
+    [Arguments]   &{campsite_dictionary}
+
+    ${response}=    POST On Session    alias=travelapi    url=    json=${campsite_dictionary}
 
     RETURN     ${response}
 
 GET request and return response
-    [Arguments]    ${alias}=travelapi    ${url}=campsites
-    ${response}=    GET On Session    alias=${alias}    url=${url}
-
+    [Arguments]    ${alias}=travelapi
+    ${response}=    GET On Session    alias=${alias}    url=
     RETURN    ${response}
 
 # OPTIONAL: write custom keywords to make your life easier

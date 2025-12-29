@@ -1,5 +1,6 @@
 *** Settings ***
 Library    RequestsLibrary
+Library    Collections
 
 *** Variables ***
 ${alias}=    PraegusTravelApi
@@ -44,31 +45,41 @@ Setup Travel Suite
 Check "${response}" Has Status: "${status}"   
     Should Be Equal As Integers    ${response.status_code}    ${status}
 
-POST campsite and return response
-    [Documentation]    Returns the response to posting a campsite
+Create Campsite Dictionary
+    [Documentation]    Returns a dictionary with all the keys for a campsite, each argument is a key
     [Arguments]  
-    ...    ${name}                        #Mandatory
-    ...    ${location}                     #Mandatory
+    ...    ${name}                        #Mandatory for keyword
+    ...    ${location}                     #Mandatory for keyword
     ...    ${description}=""   
-    ...    ${pricePerNight}=0    
-    ...    ${capacity}=1    
-    ...    ${amenities}=""    
+    ...    ${pricePerNight}=99.99    
+    ...    ${capacity}=2
+    ...    ${amenities}=""
+    ...    ${imageUrl}=${None}
+    ...    ${available}=true
     ...    ${campsiteType}="camping"    
     ...    ${terrainType}="Urban"    
     ...    ${accessibilityLevel}="hard"
 
-        &{payload}=    Create Dictionary    
+        &{campsite}=    Create Dictionary    
     ...    name=${name}
     ...    location=${location}
     ...    description=${description}
     ...    pricePerNight=${pricePerNight}
     ...    capacity=${capacity}
     ...    amenities=${amenities}
+    ...    imageUrl=${imageUrl}
+    ...    available=${available}
     ...    campsiteType=${campsiteType}
     ...    terrainType=${terrainType}
     ...    accessibilityLevel=${accessibilityLevel}
 
-    ${response}=    POST On Session    alias=${alias}    url=    json=${payload}
+    RETURN    ${campsite}
+
+POST campsite dictionary and return response
+    [Documentation]    Posts a new campsite and returns the response to posting a campsite dictionary
+    [Arguments]   &{campsite_dictionary}
+
+    ${response}=    POST On Session    alias=${alias}    url=    json=${campsite_dictionary}
 
     RETURN     ${response}
 
@@ -79,8 +90,15 @@ PUT campsite and return response
     ${response}=    PUT On Session    alias=${alias}    url=${id}   json=${campsiteDict}
     RETURN     ${response}
 
-Update Campsite Dictionary
-    [Documentation]    Takes a campsite dictionary, updates the key with the newValue and returns it
-    [Arguments]    ${dict}    ${key}    ${newValue}
-    &{newDict}=    Create Dictionary    &{dict}    ${key}=${newValue}
-    RETURN     ${newDict}
+Update dict "${dict}" key "${key}" with value "${value}"
+    [Documentation]    Takes a dictionary, updates the key with the new value and returns it
+    ...    This can also be done directly using the Set To Dictionary keyword
+    Set To Dictionary    ${dict}    ${key}=${value}
+    RETURN     ${dict}
+
+Update Dictionary with partial dictionary
+    [Documentation]    Takes a dictionary, updates the key with the partial_dict and returns it
+    ...    This can also be done directly using the Set To Dictionary keyword
+    [Arguments]    ${dict}    &{partial_dict}
+    Set To Dictionary    ${dict}    &{partial_dict}
+    RETURN     ${dict}
