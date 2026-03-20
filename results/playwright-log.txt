@@ -1,39 +1,57 @@
-{"level":30,"time":"2026-03-20T13:41:55.721Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Listening on 127.0.0.1:56167"}
-{"level":30,"time":"2026-03-20T13:41:55.781Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2026-03-20T13:41:55.924Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
-{"level":30,"time":"2026-03-20T13:41:55.925Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2026-03-20T13:41:55.925Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method newBrowser"}
-{"level":30,"time":"2026-03-20T13:41:55.928Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method newContext"}
-{"level":30,"time":"2026-03-20T13:41:55.929Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"locale\":\"nl-NL\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"Europe/Amsterdam\",\"viewport\":{\"width\":1280,\"height\":720}}"}
-{"level":30,"time":"2026-03-20T13:41:55.929Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@edb6a700a213d4455d2b4a60acdd0d52\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=310fb356-b9d8-4573-ac4e-bf4471b0eed4\"}"}
-{"level":30,"time":"2026-03-20T13:41:55.929Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Trace file: "}
-{"level":30,"time":"2026-03-20T13:41:55.936Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Setting default timeout for context context=8bd2e95f-0ac1-45e3-9fb4-3b7b0006985b to 10000"}
-{"level":30,"time":"2026-03-20T13:41:55.936Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Changed active context: context=8bd2e95f-0ac1-45e3-9fb4-3b7b0006985b"}
-{"level":30,"time":"2026-03-20T13:41:55.936Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method newContext"}
-{"level":30,"time":"2026-03-20T13:41:55.939Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method newPage"}
-{"level":30,"time":"2026-03-20T13:41:55.939Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@edb6a700a213d4455d2b4a60acdd0d52\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=8bd2e95f-0ac1-45e3-9fb4-3b7b0006985b\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@9056b3a699e6d6eb8fcf5fc9fb06d254\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"locale\":\"nl-NL\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"Europe/Amsterdam\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=310fb356-b9d8-4573-ac4e-bf4471b0eed4\"}"}
-{"level":30,"time":"2026-03-20T13:41:56.015Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Video path: undefined"}
-{"level":30,"time":"2026-03-20T13:41:56.015Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Changed active page"}
-{"level":30,"time":"2026-03-20T13:41:57.292Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method newPage"}
-{"level":30,"time":"2026-03-20T13:41:57.298Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method click"}
-{"level":30,"time":"2026-03-20T13:41:57.298Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Strict mode is enabled, find Locator with text=List Your Campsite in page."}
-{"level":30,"time":"2026-03-20T13:41:58.519Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method click"}
-{"level":30,"time":"2026-03-20T13:41:58.527Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-20T13:41:58.529Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-20T13:41:58.530Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-20T13:41:58.531Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-20T13:41:58.532Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-20T13:41:58.533Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-20T13:41:58.535Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-20T13:41:58.536Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-20T13:41:58.537Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Changed active context: context=8bd2e95f-0ac1-45e3-9fb4-3b7b0006985b"}
-{"level":30,"time":"2026-03-20T13:41:58.537Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Changing current active page: page=aaa94088-6f86-4145-aa75-d2646f35ec97"}
-{"level":30,"time":"2026-03-20T13:41:58.537Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Changed active page"}
-{"level":30,"time":"2026-03-20T13:41:58.538Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method closeContext"}
-{"level":30,"time":"2026-03-20T13:41:58.543Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Removed page=4d82c0f0-5203-4071-9c45-057de87863e0 from context=8bd2e95f-0ac1-45e3-9fb4-3b7b0006985b page stack"}
-{"level":30,"time":"2026-03-20T13:41:58.546Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method closeContext"}
-{"level":30,"time":"2026-03-20T13:41:58.549Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method closeBrowser"}
-{"level":30,"time":"2026-03-20T13:41:58.621Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method closeBrowser"}
+{"level":30,"time":"2026-03-20T16:12:53.362Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Listening on 127.0.0.1:46029"}
+{"level":30,"time":"2026-03-20T16:12:53.405Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-03-20T16:12:53.552Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Adding browser to stack: chromium, version: 143.0.7499.4"}
+{"level":30,"time":"2026-03-20T16:12:53.552Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-03-20T16:12:53.552Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-03-20T16:12:53.557Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method newContext"}
+{"level":30,"time":"2026-03-20T16:12:53.557Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"locale\":\"nl-NL\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"Europe/Amsterdam\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2026-03-20T16:12:53.558Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@5c14b80cd6f3f348235871527c2a8125\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=0f5b4c12-4654-4a2d-b200-0cc51a6dfc2f\"}"}
+{"level":30,"time":"2026-03-20T16:12:53.558Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Trace file: "}
+{"level":30,"time":"2026-03-20T16:12:53.564Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Setting default timeout for context context=e4aa8eec-6f5e-4e1e-ae00-f640877c38ff to 10000"}
+{"level":30,"time":"2026-03-20T16:12:53.564Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Changed active context: context=e4aa8eec-6f5e-4e1e-ae00-f640877c38ff"}
+{"level":30,"time":"2026-03-20T16:12:53.565Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method newContext"}
+{"level":30,"time":"2026-03-20T16:12:53.567Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-03-20T16:12:53.568Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@5c14b80cd6f3f348235871527c2a8125\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=e4aa8eec-6f5e-4e1e-ae00-f640877c38ff\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@81fcd6c491685cb3eb5405af7ca4ae4d\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":true,\"javaScriptEnabled\":true,\"locale\":\"nl-NL\",\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"timezoneId\":\"Europe/Amsterdam\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=0f5b4c12-4654-4a2d-b200-0cc51a6dfc2f\"}"}
+{"level":30,"time":"2026-03-20T16:12:53.660Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Video path: undefined"}
+{"level":30,"time":"2026-03-20T16:12:53.660Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Changed active page"}
+{"level":30,"time":"2026-03-20T16:12:54.911Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method newPage"}
+{"level":30,"time":"2026-03-20T16:12:54.915Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method goTo"}
+{"level":30,"time":"2026-03-20T16:12:56.063Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method goTo"}
+{"level":30,"time":"2026-03-20T16:12:56.067Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-03-20T16:12:56.067Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Strict mode is enabled, find Locator with id=name in page."}
+{"level":30,"time":"2026-03-20T16:12:57.088Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method fillText"}
+{"level":30,"time":"2026-03-20T16:12:57.091Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method fillText"}
+{"level":30,"time":"2026-03-20T16:12:57.091Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Strict mode is enabled, find Locator with label=Location in page."}
+{"level":30,"time":"2026-03-20T16:12:58.092Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Error of node method  fillText"}
+================= Original suppressed error =================
+locator.fill: Unknown engine "label" while parsing selector label=Location
+Call log:
+[2m  - waiting for locator('label=Location')[22m
+
+    at fillText (/home/floris/praegus/rfw-training/venv/lib/python3.12/site-packages/Browser/wrapper/index.js:12293:17)
+    at async PlaywrightServer.fillText (/home/floris/praegus/rfw-training/venv/lib/python3.12/site-packages/Browser/wrapper/index.js:13635:28) {
+  name: 'Error'
+}
+=============================================================
+{"level":30,"time":"2026-03-20T16:12:58.095Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2026-03-20T16:12:58.095Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","Take screenshot with options: ":{"path":"/home/floris/praegus/rfw-training/results/browser/screenshot/fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2026-03-20T16:12:58.122Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2026-03-20T16:12:58.142Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-20T16:12:58.144Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-20T16:12:58.145Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-20T16:12:58.146Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-20T16:12:58.147Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-20T16:12:58.148Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-20T16:12:58.149Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-20T16:12:58.150Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-20T16:12:58.151Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Changed active context: context=e4aa8eec-6f5e-4e1e-ae00-f640877c38ff"}
+{"level":30,"time":"2026-03-20T16:12:58.151Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Changing current active page: page=cc68811f-d4a4-4ca7-945f-50776a00f982"}
+{"level":30,"time":"2026-03-20T16:12:58.151Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Changed active page"}
+{"level":30,"time":"2026-03-20T16:12:58.153Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-03-20T16:12:58.161Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Removed page=13c46bce-cf49-4144-8508-5eda1a3387f2 from context=e4aa8eec-6f5e-4e1e-ae00-f640877c38ff page stack"}
+{"level":30,"time":"2026-03-20T16:12:58.163Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-03-20T16:12:58.167Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2026-03-20T16:12:58.240Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method closeBrowser"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (/home/floris/praegus/rfw-training/venv/lib/python3.12/site-packages/Browser/wrapper/index.js:12672:15)
@@ -47,7 +65,7 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2026-03-20T13:41:58.627Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-20T13:41:58.627Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-20T13:41:59.159Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2026-03-20T13:41:59.159Z","pid":276399,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2026-03-20T16:12:58.246Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-20T16:12:58.246Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-03-20T16:12:58.771Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-03-20T16:12:58.771Z","pid":560746,"hostname":"floris-ThinkPad-P1-Gen-7","msg":"End of node method closeAllBrowsers"}
