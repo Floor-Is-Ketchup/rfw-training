@@ -30,7 +30,7 @@ Test Password Generator Keyword
     Should Be Equal As Strings   ${special_password}    ${expected_password}
 
 Test Print Keyword
-    ${formatted_info}=    Get Formatted Campsite Info
+    ${formatted_info}=    Format Campsite Info
     ...    campsite_name=${campsite_name}
     ...    features=${features}
     # TODO: Check that the campsite name and all features are included in the sentence that is returned, 

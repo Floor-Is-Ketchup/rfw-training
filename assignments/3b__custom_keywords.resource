@@ -22,7 +22,7 @@ Calculate Difference
     ${diff}=    Evaluate    abs(${x} - ${y})
     RETURN    ${diff}
 
-Get Formatted Campsite Info
+Format Campsite Info
     [Documentation]    Returns a full sentence including the provided information
     [Arguments]    ${campsite_name}    ${features}
     VAR   ${sentence}=   The campsite "${campsite_name}" has the following features: ${features}.
