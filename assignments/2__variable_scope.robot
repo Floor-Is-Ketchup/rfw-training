@@ -2,39 +2,43 @@
 Documentation     Answer the commented questions for yourself, run the suite and check your answers
 ...        
 ...        documentation: https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#variables
-Suite Setup       Set All Suite Variables    #sets SUITE_VAR to S_A
+Suite Setup       Set All Global Variables    #sets GLOBAL_VAR to G_A
 
 *** Variables ***
-${GLOBAL_VAR}=     G_A
+${SUITE_VAR}=     S_A
 
 *** Test Cases ***
 Test 1 - Set Variables
     [Documentation]    Setting and logging several vars with different scopes
-    Set Test Variable    ${Test_VAR}    T_A
-    Log   SUITE_VAR IS NOW: ${SUITE_VAR}        # What is the value here? S_A or S_B?
+    Log To Console   SUITE_VAR IS NOW: ${SUITE_VAR}        # What is the value here? S_A or S_B?
     Set Suite Variable    ${SUITE_VAR}   S_B
-    Log    SUITE_VAR IS NOW: ${SUITE_VAR}        # What is the value here? S_A or S_B?
-    Set Variable   ${global_var}    G_B
-    Log    GLOBAL_VAR IS NOW: ${GLOBAL_VAR}        # What is the value here? G_A or G_B?
+    Log To Console    SUITE_VAR IS NOW: ${SUITE_VAR}        # What is the value here? S_A or S_B?
+    Log To Console    GLOBAL_VAR IS: ${GLOBAL_VAR}
+    ${global_var}=     Set Variable    G_B                # What is the value here? G_A or G_B?
+    Log To Console    GLOBAL_VAR IS NOW: ${GLOBAL_VAR}     # What is the value here? G_A or G_B?
 
 Test 2 - Log Variables
     [Documentation]    Setting and logging several vars with different scopes
     [Setup]    Set Test Variable    ${TEST_VAR}    T_B
-    Log    TEST_VAR IS NOW: ${TEST_VAR}           # What is the value here?    T_A or T_B?
-    Log    SUITE_VAR IS NOW: ${ S U I T E _ V A R }          # What is the value here?    S_A or S_B?
-    Log    GLOBAL_VAR IS NOW: ${globaL_ var}        # What is the value here?     G_A or G_B?
-    Keyword to Set my TEST_VAR
-    Log    TEST_VAR IS NOW: ${TEST_VAR}        # What is the value here? T_A, T_B or T_C?
+    Log To Console    TEST_VAR IS NOW: ${TEST_VAR}           # What is the value here?    T_A or T_B?
+    Log To Console    SUITE_VAR IS NOW: ${ S U I T E _ V A R }          # What is the value here?    S_A or S_B?
+    Log To Console    GLOBAL_VAR IS NOW: ${globaL_ var}        # What is the value here?     G_A or G_B?
+    Keyword to Set Variables
+    Log To Console    TEST_VAR IS NOW: ${TEST_VAR}        # What is the value here? T_A, T_B or T_C?
+    Log To Console    ${my_var}    # What is the value here?    v_a    or is it unknown?
 
 Bonus
-    [Tags]    bonus    robot:skip
-    Log To Console     ${suite_VAR}    # What is the value if you run the whole suite?
+    [Tags]    bonus
+    Log To Console     suite var in bonus is: ${suite_VAR}    # What is the value if you run the whole suite?
+    Log To Console     Global var in bonus is: ${global_var}
                                        # And what if you only run this test?
 
 *** Keywords ***
-Set All Suite Variables
-    Set Suite Variable    ${Suite _ Var}    S_A
+Set All Global Variables
+    Set Global Variable    ${Global _ Var}    G_A
 
-Keyword to Set my TEST_VAR
-    Set Variable    ${TEST_Var}    T_C
-    Log To Console    set the value for TEST_VAR to: ${TEST_VAR}
+Keyword to Set Variables
+    ${TEST_Var}=     Set Variable   T_C
+    Log To Console    set the value for TEST_VAR to: ${TEST_VAR}    # What is the value here? T_A, T_B or T_C?
+    ${my_var}=    Set Variable     v_a
+    Set Suite Variable    ${suite_VAR}    S_C
