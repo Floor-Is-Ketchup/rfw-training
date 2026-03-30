@@ -3,7 +3,7 @@ Documentation    This is a demo Suite
 ...              Frontend can be found here: https://travels.praegus.nl/campsites
 ...              Browser documentation can be found here: https://marketsquare.github.io/robotframework-browser/Browser.html
 Library    Browser
-Resource   resources/frontend_keywords.resource
+Resource   frontend_keywords.resource
 Test Setup    Start Browser
 Suite Teardown    Close Browser
 
