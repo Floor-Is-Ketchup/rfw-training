@@ -4,7 +4,7 @@ Documentation    This is a demo Suite
 ...              Browser documentation can be found here: https://marketsquare.github.io/robotframework-browser/Browser.html
 Library    Browser
 Resource   frontend_keywords.resource
-Test Setup    Start Browser
+Test Setup    Start Browser    slowMo=1s
 Suite Teardown    Close Browser
 
 *** Comments ***
@@ -22,8 +22,8 @@ ${capacityInput}=                css=[name="capacity"]
 ${accessibilityLevelSelect}=     xpath=//select[@id="accessibilityLevel"]
 
 *** Test Cases ***
-Go to campsite overview with View All
-    Click    text=List Your Campsites
+Check the buttton to list campsite
+    Click    text=List Your Campsite
     Get Url    should be    ${baseUrl}/campsites/new
 
 Add Basic Campsite
