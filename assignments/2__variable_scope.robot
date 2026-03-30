@@ -25,6 +25,7 @@ Test 2 - Log Variables
     Log To Console    GLOBAL_VAR IS NOW: ${globaL_ var}        # What is the value here?     G_A or G_B?
     Keyword to Set Variables
     Log To Console    TEST_VAR IS NOW: ${TEST_VAR}        # What is the value here? T_A, T_B or T_C?
+    Log To Console    ${suite_var}    # What is the value here? S_A, S_B or S_C?
     Log To Console    ${my_var}    # What is the value here?    v_a    or is it unknown?
 
 Bonus
@@ -41,4 +42,5 @@ Keyword to Set Variables
     ${TEST_Var}=     Set Variable   T_C
     Log To Console    set the value for TEST_VAR to: ${TEST_VAR}    # What is the value here? T_A, T_B or T_C?
     ${my_var}=    Set Variable     v_a
-    Set Suite Variable    ${suite_VAR}    S_C
+    Log To Console    my local variable has value: ${my_var}    #what is the value? v_a or v_b?
+    Set Test Variable    ${suite_VAR}    S_C
