@@ -9,7 +9,7 @@ Suite Teardown    Close Browser
 This Suite continues on the demo project with assignments
 
 *** Variables ***
-${CreateCampsiteButton}=
+${CreateCampsiteButton}=    css=button[type="submit"]
 
 *** Test Cases ***
 Test List Your Campsites Button
@@ -21,13 +21,12 @@ Test View All Campsites Button
     Get Url    should be    ${baseUrl}/campsites
 
 Create Campsite is disabled when fields are empty
-    # TODO: Complete the Variable statement on the top of this file with a css selector
+    # TODO: Complete the Variable statement with css or role selector
     # Hint: use the fact that it is a button and it has "type=submit"
     
     Go To    url=${baseUrl}/campsites/new
 
-    # TODO: Use your selector to determine that it is disabled when no data is filled in
-    # Hint: use the "Wait For Elements Sate" keyword from Browser Library
+    Wait For Elements State      ${CreateCampsiteButton}    disabled
 
 Bonus
     [Tags]  Bonus  robot:skip    # Remove this line to run the test
