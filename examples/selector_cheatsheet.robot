@@ -6,7 +6,7 @@ Library    Browser
 Example Selectors Test
     # Text selectors
     Click    text=View All Campsites    #Exact Match
-    Click    text=/View All/i           #Partial Match with Regex
+    Click    text=View All           #Partial Match also works
 
     # ID selectors
     Click    id=submit

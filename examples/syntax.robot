@@ -64,6 +64,10 @@ Teardown Test
     Log    Running Test Teardown
     # Add per-test cleanup here
 
+Wait for keyword
+    # Built In retry mechanism for keywords that might take time to succeed
+    Wait Until Keyword Succeeds    10s    1s    Log    log_msg
+
 Custom Keyword Example
     [Arguments]    ${arg1}
     Log To Console    \nRunning custom keyword with argument: ${arg1}

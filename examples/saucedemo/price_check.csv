@@ -1,0 +1,7 @@
+*** Test Cases ***;${itemName};${expectedPrice}
+Backpack;Backpack;29.99
+Bike Light;Bike Light;9.99
+Bolt T-Shirt;Bolt T-Shirt;15.99
+Jacket;Fleece Jacket;49.99
+Onesie;Onesie;7.99
+Test T-Shirt;T-Shirt (Red);15.99
