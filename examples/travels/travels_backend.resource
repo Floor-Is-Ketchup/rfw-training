@@ -2,20 +2,19 @@
 Library    RequestsLibrary
 Library    Collections
 
-
-
 *** Variables ***
-${BASE_URL}       http://travels.praegus.nl/api/campsites
+${API_URL}       http://travels.praegus.nl/api/campsites
 ${alias}=    PraegusTravelApi
 
 *** Keywords ***
 
 Setup Travel Api Session
-    Create Session     alias=${alias}   url=${BASE_URL}
+    [Arguments]  ${url}=${API_URL}
+    Create Session     alias=${alias}   url=${url}
 
 GET campsites and return response
-    [Arguments]    ${url}=
-    ${response}=    GET On Session    alias=${alias}    url=${url}
+    [Arguments]    ${url}=    ${expected_status}=200
+    ${response}=    GET On Session    alias=${alias}    url=${url}    expected_status=${expected_status}
     RETURN    ${response}
 
 GET campsite with maxPrice
@@ -29,9 +28,9 @@ GET campsite with location
     RETURN    ${response}
 
 GET campsite with ID: "${id}"
+    [Arguments]    ${expected_status}=200
     ${id}=    Convert To String    ${id}
-    ${response}=    GET campsites and return response    url=${id}
-    Check "${response}" has status: "200"
+    ${response}=    GET campsites and return response    url=${id}    expected_status=${expected_status}
     RETURN    ${response}
 
 DELETE campsite with ID: "${id}"
@@ -55,15 +54,15 @@ Create Campsite Dictionary
     [Arguments]  
     ...    ${name}                        #Mandatory for keyword
     ...    ${location}                     #Mandatory for keyword
-    ...    ${description}=""   
+    ...    ${description}=${EMPTY}
     ...    ${pricePerNight}=99.99    
     ...    ${capacity}=2
-    ...    ${amenities}=""
-    ...    ${imageUrl}=${None}
+    ...    ${amenities}=${EMPTY}
+    ...    ${imageUrl}=${EMPTY}
     ...    ${available}=true
-    ...    ${campsiteType}="camping"    
-    ...    ${terrainType}="Urban"    
-    ...    ${accessibilityLevel}="hard"
+    ...    ${campsiteType}=tent    
+    ...    ${terrainType}=forest
+    ...    ${accessibilityLevel}=hard
 
         &{campsite}=    Create Dictionary    
     ...    name=${name}
