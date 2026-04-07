@@ -30,7 +30,7 @@ Bonus
     ...    For actual practical use, it would be advised to use a test template instead to achieve the same goal.
     [Tags]    bonus    robot:skip
     #TODO: Replace the "???" and then each "?" in the following test to make it pass.
-    VAR    &{status_and_information}=    200=OK    404=Not Found    500=Error    FOO=unknown
+    VAR    &{status_and_information}=    200=OK    404=Not Found    500=Error    FOO=unknown    #No need to change this
     FOR     ?    IN      ???
         ${status_info}=    Custom Return Status Information    status=?
         Should Contain   container=${status_info}   item=${status_and_information}[?]
@@ -40,7 +40,7 @@ Bonus
 *** Keywords ***
 Custom Return Status Information
     [Documentation]    returns information regarding the status
-    ...  status 200 = OK, status 404 = Not Found, status 500 = Internal Server Error, other statusses are unknown.
+    ...  status 200 = OK, status 404 = Not Found, status 500 = Internal Server Error, other statusses return "unknown".
     [Arguments]    ${status}
     IF    "${status}" == "200"
         RETURN   OK  
