@@ -29,8 +29,7 @@ Bonus
     [Documentation]    This test utilizes a FOR loop to run all the tests at once.
     ...    For actual practical use, it would be advised to use a test template instead to achieve the same goal.
     [Tags]    bonus    robot:skip
-    #TODO: Replace the "?" and "???" in the following test to make it pass
-    #TIP: every "?" is replaced by the exact same string
+    #TODO: Replace the "???" and then each "?" in the following test to make it pass.
     VAR    &{status_and_information}=    200=OK    404=Not Found    500=Error    FOO=Unknown
     FOR     ?    IN      ???
         ${status_info}=    Custom Return Status Information    status=?
