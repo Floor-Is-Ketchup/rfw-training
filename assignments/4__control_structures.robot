@@ -30,7 +30,7 @@ Bonus
     ...    For actual practical use, it would be advised to use a test template instead to achieve the same goal.
     [Tags]    bonus    robot:skip
     #TODO: Replace the "???" and then each "?" in the following test to make it pass.
-    VAR    &{status_and_information}=    200=OK    404=Not Found    500=Error    FOO=Unknown
+    VAR    &{status_and_information}=    200=OK    404=Not Found    500=Error    FOO=unknown
     FOR     ?    IN      ???
         ${status_info}=    Custom Return Status Information    status=?
         Should Contain   container=${status_info}   item=${status_and_information}[?]
