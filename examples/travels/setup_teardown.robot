@@ -6,7 +6,7 @@ Resource    travels_backend.resource
 Suite Setup   Setup Travel Api Session
 Test Setup    Run Keywords    Start Browser    slowMo=0s     url=${BASE_URL}/campsites/new    AND
 ...           Setup Campsite    TEST
-# Test Teardown    DELETE campsite with ID: "${campsite_id}"
+Test Teardown    DELETE campsite with ID: "${campsite_id}"
 Suite Teardown   Close Browser
 
 *** Variables ***
